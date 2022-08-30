@@ -1,0 +1,34 @@
+<!-- <div
+  class="class-container-wrap"
+  [ngClass]="{
+    'class-sidenav-collapsed': options.sidenavCollapsed,
+    'class-navbar-side': options.navPos === 'side',
+    'class-header-above': options.headerPos === 'above',
+    'class-header-white': options.theme === 'light'
+  }"
+  [dir]="options.dir"
+> -->
+<div class="layout-container-wrap">
+
+    <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+    <!-- <app-header (toggleSidenav)="sidenav.toggle()" 
+        (toggleSidenavNotice)="sidenavNotice.toggle()"
+        (toggleSidenavRightPanel)="sidenavRightPanel.toggle()">
+    </app-header> -->
+
+    <div class="sidenav-container">
+      <mat-sidenav-container class="basic-layout-container">
+        <mat-sidenav #sidenav class="class-sidenav-left" mode="over" opened>
+            <app-sidebar>
+
+            </app-sidebar>
+        </mat-sidenav>
+        <mat-sidenav-content #content class="basic-layout-content-wrap">
+            <div class="basic-layout-content">
+                <ng-content></ng-content>
+            </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+
+</div>
