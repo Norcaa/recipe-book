@@ -8,6 +8,8 @@ import { BasicLayoutComponent } from './theme/basic-layout/basic-layout.componen
 import { HeaderComponent } from './theme/header/header.component';
 import { SidebarComponent } from './theme/sidebar/sidebar.component';
 import { MaterialModule } from 'material.module';
+import { RecipesModule } from './components/recipes/recipes.module';
+import { ShoppingModule } from './components/shopping/shopping.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MaterialModule } from 'material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RecipesModule,
+    ShoppingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
