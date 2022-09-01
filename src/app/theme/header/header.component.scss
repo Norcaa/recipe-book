@@ -17,25 +17,19 @@
             gap: .5rem;
 
             .header-title {
-                h1 {
+                a {
                   font-size: 24px;
-                  line-height: 1;
+                  text-decoration: none;
+                  color: black;
                 }
             }
+        }
 
-            .selected-theme-container {
-                height: 100%;
+        .header-content-middle {
+            .middle-toolbar-options {
                 display: flex;
-                gap: 0.5rem;
-                align-items: center;
-
-                .selected-theme-title {
-                    font-size: 14px;
-                }
-
-                .selected-theme-content {
-                    height: 36px;
-                }
+                flex-direction: row;
+                gap: 1rem;
             }
         }
 
