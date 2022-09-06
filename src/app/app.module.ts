@@ -10,13 +10,15 @@ import { SidebarComponent } from './theme/sidebar/sidebar.component';
 import { MaterialModule } from 'material.module';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingModule } from './components/shopping/shopping.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicLayoutComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
