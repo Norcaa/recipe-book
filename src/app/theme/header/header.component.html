@@ -11,8 +11,23 @@
 
         <div class="header-content-middle">
             <div class="middle-toolbar-options">
-                <div class="option-name" routerLink="#">Recipes</div>
-                <div class="option-name" routerLink="#">Shopping list</div>
+
+                <div class="menu-container">
+                    <button mat-button [matMenuTriggerFor]="recipemenu" routerLink="recipes">Recipes</button>
+                    <mat-menu #recipemenu="matMenu">
+                        <button mat-menu-item routerLink="recipes/list">All Recipes</button>
+                        <button mat-menu-item routerLink="categories">Categories</button>
+                    </mat-menu>
+                </div>
+
+                <div class="menu-container">
+                    <button mat-button [matMenuTriggerFor]="shoppingmenu" routerLink="shopping">Shopping</button>
+                    <mat-menu #shoppingmenu="matMenu">
+                        <button mat-menu-item routerLink="shopping-list">Shopping list</button>
+                        <button mat-menu-item routerLink="Ingredients-list">Ingredients list</button>
+                    </mat-menu>
+                </div>
+
             </div>
         </div>
 
