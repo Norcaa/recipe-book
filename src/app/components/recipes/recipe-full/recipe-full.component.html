@@ -1,0 +1,76 @@
+<div class="recipe-full-container"  *ngIf="recipe" fxLayout="column" fxLayoutAlign="center center">
+
+    <div class="recipe-cover-image">
+        <img [src]="recipe.imagePath" [alt]="">
+    </div>
+
+    <div class="recipe-content">
+        <div class="recipe-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="recipe-title-container">
+                <h1 style="margin: 0;"> {{ recipe.name }} </h1>
+            </div>
+            <!-- COMPONENT: -->
+            <div class="recipe-button-container">
+                <button mat-icon-button matTooltip="To Shopping List">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Edit Recipe">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Delete Recipe">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="recipe-text-container" fxLayout="column" fxLayoutGap="1rem">
+            <div class="recipe-description-container">
+                <h2> {{ recipe.description }} </h2>
+            </div>
+        
+            <!-- COMPONENT: -->
+            <div class="recipe-ingredients-container">
+                <h2>Ingredients</h2>
+                <div class="ingredient-list-container" 
+                    *ngFor="let ingredient of recipe.ingredients"
+                    fxLayout="rows" fxLayoutGap="1rem" fxLayoutAlign="start center">
+                        <mat-icon>arrow_right</mat-icon>
+                        <a href="" class="ingredient-list-item">
+                            {{ ingredient.name }} ({{ ingredient.quantity }})
+                        </a>
+                </div>
+            </div>
+
+            <!-- COMPONENT: -->
+            <div class="recipe-preparation-container">
+                <h2>Preparation</h2>
+                <div class="preparation-step-container" 
+                    *ngFor="let step of recipe.steps; let i = index"
+                    fxLayout="rows" fxLayoutGap="1rem" fxLayoutAlign="start center">
+                        <div class="step-index"> {{i+1}}. </div>
+                        <div class="step-text"> {{ step }} </div>
+                </div>
+            </div>
+
+            <!-- COMPONENT: -->
+            <div class="recipe-tags-container">
+
+            </div>
+
+            <!-- COMPONENT: -->
+            <div class="recipe-preparation-container">
+                
+            </div>
+
+            <!-- COMPONENT: -->
+            <div class="recipe-preparation-container">
+                
+            </div>
+
+
+
+        </div>  
+
+    </div>
+
+</div>
