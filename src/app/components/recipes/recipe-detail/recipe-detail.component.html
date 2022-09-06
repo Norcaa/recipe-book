@@ -1,3 +1,89 @@
-<div class="recipes-detail-container">
+<!-- WITH ANGULAR MATERIAL: -->
+<!-- <mat-card class="recipes-detail-container">
+
+    <mat-card-header style="justify-content: space-between;">
+        <mat-card-title class="recipe-name-container">
+            <h1> {{ recipe.name }} </h1>
+        </mat-card-title>
+        <div class="recipe-button-container">
+            <button mat-icon-button matTooltip="To Shopping List">
+                <mat-icon>add</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Edit Recipe">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Delete Recipe">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="recipe-image-container" style="display: flex; justify-content: center;">
+            <img [src]="recipe.imagePath" [alt]="">
+        </div>  
+        <div class="recipe-description-container">
+            <h2>Description</h2>
+            <div> {{ recipe.description }} </div>
+        </div>
     
+        <div class="recipe-ingredients-container">
+            <div class="recipe-ingredients-header">
+                <h2>Ingredients</h2>
+                <button mat-icon-button matTooltip="To Shopping List">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+            <div>  </div>
+        </div>
+    </mat-card-content>   
+
+    <mat-card-actions>
+        
+    </mat-card-actions>
+
+</mat-card> -->
+
+<!-- WITHOUT ANGULAR MATERIAL, ONLY BUTTONS: -->
+<div class="recipes-detail-container" fxLayout="column">
+
+    <div class="recipes-detail-header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="recipe-name-container">
+            <h1 style="margin: 0;"> {{ recipe.name }} </h1>
+        </div>
+        <div class="recipe-button-container">
+            <button mat-icon-button matTooltip="To Shopping List">
+                <mat-icon>add</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Edit Recipe">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Delete Recipe">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="recipes-detail-content">
+        <div class="recipe-image-container">
+            <img [src]="recipe.imagePath" [alt]="">
+        </div>
+
+        <div class="recipe-text-container" fxLayout="column" fxLayoutGap="1rem">
+            <div class="recipe-description-container">
+                <h2>Description</h2>
+                <div> {{ recipe.description }} </div>
+            </div>
+        
+            <div class="recipe-ingredients-container">
+                <h2>Ingredients</h2>
+                <div class="ingredient-list-container" *ngFor="let ingredient of recipe.ingredients">
+                    <a href="" class="ingredient-list-item">
+                        {{ ingredient.name }} ({{ ingredient.quantity }})
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>   
+
 </div>
