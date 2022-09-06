@@ -1,3 +1,5 @@
 export class Ingredient {
-    constructor( public name: string, public amount: number) {}
+
+    // type: meat, baking, drink, Condiments, etc.
+    constructor( public name: string, public quantity: string, public type: string) {}
 }
