@@ -1,0 +1,15 @@
+.recipes-list-container {
+    padding: 1rem;
+
+    .recipe-item-container {
+        width: 400px;
+
+        a {
+           text-decoration: none; 
+        }
+    }
+
+    .recipe-list-item-container {
+        gap: 1rem;
+    }
+}

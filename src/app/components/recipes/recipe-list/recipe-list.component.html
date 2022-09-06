@@ -1,3 +1,19 @@
-<div class="recipes-list-container">
-    <app-recipe-item></app-recipe-item>
+<div class="recipes-list-container" fxLayout="column" fxLayoutGap="1rem">
+
+    <div class="recipe-list-title">
+        <h1>All Recipes ({{recipes.length}}) </h1>
+    </div>
+
+    <div class="add-new-recipe">
+        <button mat-raised-button>Add new recipe</button>
+    </div>
+
+    <div class="recipe-list-item-container" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="recipe-item-container" *ngFor="let recipe of recipes; let i = index">
+            <a [href]="'http://localhost:4200/recipe/' + recipe.slug">
+                <app-recipe-item [recipe]="recipe" (selectedRecipe)="selectRecipe($event)"></app-recipe-item>
+            </a>
+        </div>
+    </div>
+    
 </div>
