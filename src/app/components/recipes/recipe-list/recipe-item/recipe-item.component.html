@@ -1,3 +1,28 @@
-<div class="recipes-item-container">
+<!-- WITH ANGULAR MATERIAL: -->
+<mat-card class="recipe-item-container" (click)="selectRecipe(recipe)" *ngIf="recipe">
+    <mat-card-title-group class="recipe-info-container">
+        <mat-card-title class="recipe-name-container" [matTooltip]="recipe.name">
+            {{ recipe.name }}
+        </mat-card-title>
+        <mat-card-subtitle class="recipe-description-container">
+            {{ recipe.description }}
+        </mat-card-subtitle>
+        <img mat-card-sm-image [src]="recipe.imagePath" [alt]="recipe.name">
+    </mat-card-title-group>
+</mat-card>
 
-</div>
+<!-- WITHOUT ANGULAR MATERIAL: -->
+<!-- <div class="recipe-item-container" (click)="selectRecipe(recipe)" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1rem">
+    <div class="recipe-text-container">
+        <div class="recipe-name-container">
+            <h3> {{ recipe.name }} </h3>
+        </div>
+        <div class="recipe-description-container">
+            <div> {{ recipe.description }} </div>
+        </div>
+    </div>
+    
+    <div class="recipe-image-container">
+        <img [src]="recipe.imagePath" [alt]="recipe.name">
+    </div>
+</div> -->
