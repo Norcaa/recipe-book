@@ -7,9 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BasicLayoutComponent } from './theme/basic-layout/basic-layout.component';
 import { HeaderComponent } from './theme/header/header.component';
 import { SidebarComponent } from './theme/sidebar/sidebar.component';
-import { MaterialModule } from 'material.module';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingModule } from './components/shopping/shopping.module';
+import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
@@ -24,9 +24,9 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     RecipesModule,
-    ShoppingModule
+    ShoppingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
