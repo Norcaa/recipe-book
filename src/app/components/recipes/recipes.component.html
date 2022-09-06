@@ -1,8 +1,47 @@
+<!-- <div class="recipes-container" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around flex-start">
+    <div class="recipes-column recipe-list-column" fxFlex="35">
+        <app-recipe-list (selectedRecipe)="selectedRecipe = $event"></app-recipe-list>
+    </div>
+    <div class="recipes-column recipe-detail-column" fxFlex="60">
+        <app-recipe-detail *ngIf="selectedRecipe; else selectInfo" [recipe]="selectedRecipe"></app-recipe-detail>
+
+        <ng-template #selectInfo>
+            <div class="select-instruction">
+                Please select a recipe!
+            </div>
+        </ng-template>
+    </div>
+</div>
+ -->
+
 <div class="recipes-container">
-    <div class="recipes-column recipe-list-column">
-        <app-recipe-list></app-recipe-list>
+
+    <div class="recipes-title">
+        <h1>Recipes for you</h1>
     </div>
-    <div class="recipes-column recipe-detail-column">
-        <app-recipe-detail></app-recipe-detail>
+
+    <div class="recipes-row recipe-list-column">
+        <h2>Super Recipes</h2>
+        <div class="">
+            Super recipes here
+            <!-- card in multiple sizes -->
+        </div>
     </div>
+
+    <div class="recipes-row recipe-detail-column">
+        <h2>Popular categories</h2>
+        <div class="">
+            Popular categories here
+            <!-- category: card, model -->
+        </div>
+    </div>
+
+    <div class="recipes-row recipe-detail-column">
+        <h2>Latest recipes</h2>
+        <div class="">
+            Latest recipes here
+            <!-- card in multiple sizes -->
+        </div>
+    </div>
+
 </div>

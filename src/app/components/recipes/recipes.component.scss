@@ -1,7 +1,9 @@
 .recipes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
     padding: 1rem;
+
+    .recipes-row {
+        h2 {
+            color: #fc7974;
+        }
+    }
 }
