@@ -1,3 +1,17 @@
 <div class="shopping-edit-container">
-    
+    <form action="">
+        <div class="item-name-container">
+            <label for="name">Name</label>
+            <input type="text" name ="name" id="name" class="item-name-input" [(ngModel)]="itemName">
+        </div>
+        <div class="item-name-container">
+            <label for="quantity">Quantity</label>
+            <input type="number" name ="quantity" id="quantity" class="item-quantity-input" [(ngModel)]="itemQuantity">
+        </div>
+        <div class="item-button-container">
+            <button (click)="onAddItem()">Add</button>
+            <button (click)="onDeleteItem()">Delete</button>
+            <button (click)="onClearForm()">Clear</button>
+        </div>
+    </form>
 </div>

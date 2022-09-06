@@ -1,3 +1,9 @@
 <div class="shopping-container">
-    
+    <app-shopping-edit (addNewShoppingItem)="addNewShoppingItem($event)"></app-shopping-edit>
+
+    <div class="shopping-list-container">
+        <div class="shopping-list-item" *ngFor="let ingredient of ingredients">
+            {{ ingredient.name }} ({{ ingredient.quantity }})
+        </div>
+    </div>
 </div>
