@@ -10,7 +10,7 @@ import { SidebarComponent } from './theme/sidebar/sidebar.component';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingModule } from './components/shopping/shopping.module';
 import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './components/home/home.component';
+import { HomeModule } from './components/home/home.module';
 import { AuthModule } from './components/auth/auth.module';
 
 @NgModule({
@@ -18,16 +18,16 @@ import { AuthModule } from './components/auth/auth.module';
     AppComponent,
     BasicLayoutComponent,
     HeaderComponent,
-    SidebarComponent,
-    HomeComponent
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedModule,
     RecipesModule,
     ShoppingModule,
-    SharedModule
+    HomeModule,
     AuthModule
   ],
   providers: [],
