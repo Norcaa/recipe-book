@@ -1,0 +1,11 @@
+<mat-card class="recipe-item-container stream-item" (click)="selectRecipe(recipe)" *ngIf="recipe">
+    <mat-card-title-group class="recipe-info-container">
+        <mat-card-title class="recipe-name-container" [matTooltip]="recipe.name">
+            {{ recipe.name }}
+        </mat-card-title>
+        <mat-card-subtitle class="recipe-description-container">
+            {{ recipe.description }}
+        </mat-card-subtitle>
+        <img mat-card-sm-image [src]="recipe.imagePath" [alt]="recipe.name">
+    </mat-card-title-group>
+</mat-card>
