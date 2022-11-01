@@ -1,19 +1,52 @@
 <div class="recipes-list-container" fxLayout="column" fxLayoutGap="1rem">
-
-    <div class="recipe-list-title">
-        <h1>All Recipes ({{recipes.length}}) </h1>
-    </div>
-
-    <div class="add-new-recipe">
-        <button mat-raised-button>Add new recipe</button>
-    </div>
-
-    <div class="recipe-list-item-container" fxLayout="row wrap" fxLayoutAlign="center center">
-        <div class="recipe-item-container" *ngFor="let recipe of recipes; let i = index">
-            <a [href]="'http://localhost:4200/recipe/' + recipe.slug">
-                <app-recipe-item [recipe]="recipe" (selectedRecipe)="selectRecipe($event)"></app-recipe-item>
+    <div class="recipe-list-header" fxLayout="row" fxLayoutAlign="space-between">
+        <div class="add-new-recipe">
+            <a href="recipe/new">
+                <button mat-raised-button class="new-recipe-button">Add new recipe</button>
             </a>
         </div>
+
+        <div class="recipe-list-title">
+            <h1>All Recipes ({{recipes.length}}) </h1>
+        </div>
+
+        <!-- TODO: button style -->
+        <div class="view-selector">
+            <mat-button-toggle-group #group="matButtonToggleGroup" value="stream">
+                <mat-button-toggle value="stream">
+                    <mat-icon>view_stream</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="list">
+                    <mat-icon>list_view</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="grid">
+                    <mat-icon>grid_on</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div> 
+
+    <div class="recipe-list-item-container" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="recipe-item-container" 
+            *ngFor="let recipe of recipes; let i = index" 
+            [ngStyle]="{'width': group.value == 'list' ? '100%' : '' }">
+                <a [href]="'http://localhost:4200/recipe/' + recipe.slug">
+                    <app-recipe-stream-item 
+                        class="recipe-item" 
+                        *ngIf="group.value == 'stream'" 
+                        [recipe]="recipe" 
+                        (selectedRecipe)="selectRecipe($event)"></app-recipe-stream-item>
+                    <app-recipe-list-item 
+                        class="recipe-item" 
+                        *ngIf="group.value == 'list'" 
+                        [recipe]="recipe" 
+                        (selectedRecipe)="selectRecipe($event)"></app-recipe-list-item>
+                    <app-recipe-grid-item 
+                        class="recipe-item" 
+                        *ngIf="group.value == 'grid'" 
+                        [recipe]="recipe" 
+                        (selectedRecipe)="selectRecipe($event)"></app-recipe-grid-item>
+                </a>
+        </div>
     </div>
-    
 </div>

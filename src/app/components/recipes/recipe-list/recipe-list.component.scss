@@ -1,15 +1,41 @@
 .recipes-list-container {
     padding: 1rem;
 
-    .recipe-item-container {
-        width: 400px;
-
-        a {
-           text-decoration: none; 
-        }
-    }
-
     .recipe-list-item-container {
         gap: 1rem;
+
+        .recipe-item-container {
+            a {
+               text-decoration: none; 
+            }
+        }
+    }
+}
+
+.recipe-item::ng-deep {
+    .recipe-item-container {
+        border-radius: 1rem;
+        box-shadow: var(--main-shadow);
+      
+        mat-card-title {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            margin: 0;
+        }
+
+        mat-card-subtitle {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin: 0;
+        }
+
+        img {
+            object-fit: cover;
+            border-radius: 1rem;
+        }
     }
 }
