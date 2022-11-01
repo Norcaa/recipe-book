@@ -9,6 +9,9 @@
 .header-container {
     .class-toolbar-row1 {
         justify-content: space-between;
+        background: var(--main-color);
+        color: var(--secondary-text-color);
+        box-shadow: var(--main-shadow);
 
         .header-content-left {
             height: 100%;
@@ -20,7 +23,7 @@
                 a {
                   font-size: 24px;
                   text-decoration: none;
-                  color: black;
+                  color: inherit;
                 }
             }
         }
@@ -31,15 +34,28 @@
                 flex-direction: row;
                 gap: 1rem;
 
-                .option-name {
-                    cursor: pointer;
+                .menu-container button {
+                    font-size: 20px;
                 }
             }
         }
 
         .header-content-right {
-            .right-button-container {
+            display: flex;
+            gap: 1rem;
 
+            .register-button {
+                border: none;
+                color: var(--secondary-text-color);
+                background: none;
+            }
+            
+            .login-button {
+                border: none;
+                color: var(--main-color);
+                background: var(--background-color);
+                border-radius: 1rem;
+                padding: 0.4rem 1rem;
             }
         }
     }
