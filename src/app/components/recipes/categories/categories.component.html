@@ -1,0 +1,6 @@
+<div class="category-container">
+    <div class="category-item-container" *ngFor="let category of categories"
+        fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="1rem">
+            <app-category-item [category]="category"></app-category-item>
+    </div>
+</div>
