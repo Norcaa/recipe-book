@@ -11,6 +11,7 @@ import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingModule } from './components/shopping/shopping.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
+import { AuthModule } from './components/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
     RecipesModule,
     ShoppingModule,
     SharedModule
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
