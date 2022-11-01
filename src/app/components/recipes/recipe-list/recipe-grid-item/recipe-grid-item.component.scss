@@ -1,0 +1,27 @@
+.recipe-item-container.grid-item {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    mat-card-title {
+        height: 27%;
+        font-size: 18px;
+        line-height: 20px;
+        -webkit-line-clamp: 2;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .image-container {
+        height: 73%;
+        background: var(--background-color);
+        padding-top: 1rem;
+        
+        img {
+            height: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+}

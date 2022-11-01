@@ -1,0 +1,8 @@
+<mat-card class="recipe-item-container grid-item" (click)="selectRecipe(recipe)" *ngIf="recipe">
+    <mat-card-title class="recipe-name-container" [matTooltip]="recipe.name">
+        {{ recipe.name }}
+    </mat-card-title>
+    <div class="image-container" fxLayoutAlign="center center">
+        <img mat-card-image [src]="recipe.imagePath" [alt]="recipe.name">
+    </div>
+</mat-card>
