@@ -1,0 +1,134 @@
+<div class="profile-container" *ngIf="user">
+    <div class="profile-block user-info-container">
+
+        <!-- TODO: component -->
+        <div class="profile-action-container">
+            <div class="action-block profile-blocking">
+                <svg-icon src="assets/icons/report.svg"></svg-icon>
+            </div>
+            <div class="action-block profile-message">
+                <svg-icon src="assets/icons/message.svg"></svg-icon>
+            </div>
+        </div>
+
+        <div class="profile-image-container" *ngIf="user.image">
+            <img [src]="user.image" alt="Profile Image">
+        </div>
+
+        <div class="profile-text-container">
+            <div class="text-block user-name" *ngIf="user.firstName && user.lastName">
+                <h1> {{ user.firstName }} {{ user.lastName }} </h1>    
+            </div>
+            <div class="text-block user-location" *ngIf="user.location">
+                <svg-icon src="assets/icons/location.svg"></svg-icon>
+                Debrecen, Hungary
+            </div>
+        </div>
+
+        <!-- TODO: component -->
+        <div class="profile-follow-container">
+            <div class="stat-container">
+                <div class="stat-block user-recipes">
+                    <div class="stat-name">Recipes</div>
+                    <div class="stat-number">12</div>
+                </div>
+                <div class="stat-block user-following">
+                    <div class="stat-name">Likes</div>
+                    <div class="stat-number">230</div>
+                </div>
+                <div class="stat-block user-followers">
+                    <div class="stat-name">Followers</div>
+                    <div class="stat-number">46</div>
+                </div>
+                <div class="stat-block user-following">
+                    <div class="stat-name">Following</div>
+                    <div class="stat-number">57</div>
+                </div>
+            </div>
+            <div class="follow-button">
+                <button mat-raised-button>Follow</button>
+            </div>
+        </div>
+
+        <div class="profile-about-container" *ngIf="user.introduction">
+            {{ user.introduction }}
+        </div>
+    
+         <!-- TODO: component -->
+        <div class="profile-social-container"> 
+            <div class="social-block profile-facebook" *ngIf="user.facebook">
+                <a [href]="user.facebook">
+                    <svg-icon src="assets/icons/social/facebook.svg"></svg-icon>
+                </a>
+            </div>
+            <div class="social-block profile-instagram" *ngIf="user.instagram">
+                <a [href]="user.instagram" rel="nofollow">
+                    <svg-icon src="assets/icons/social/instagram.svg"></svg-icon>
+                </a>
+            </div>
+            <div class="social-block profile-twitter" *ngIf="user.twitter">
+                <a [href]="user.twitter" rel="nofollow">
+                    <svg-icon src="assets/icons/social/twitter.svg"></svg-icon>
+                </a>
+            </div>
+            <div class="social-block profile-youtube" *ngIf="user.youtube">
+                <a [href]="user.youtube" rel="nofollow">
+                    <svg-icon src="assets/icons/social/youtube.svg"></svg-icon>
+                </a>
+            </div>
+            <div class="social-block profile-tiktok" *ngIf="user.tiktok">
+                <a [href]="user.tiktok" rel="nofollow">
+                    <svg-icon src="assets/icons/social/tiktok.svg"></svg-icon>
+                </a>
+            </div>
+            <div class="social-block profile-linkedin" *ngIf="user.linkedin">
+                <a [href]="user.linkedin" rel="nofollow">
+                    <svg-icon src="assets/icons/social/linkedin.svg"></svg-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-block user-cook-stats-container">
+        <div class="stat-block prepared-recipes">
+            <div class="stat-title">Prepared Recipes</div>
+            <div class="stat-content">
+                <div class="stat-icon">
+                    <mat-icon>cookie</mat-icon> 
+                </div>
+                <div class="stat-value">
+                    <a href="">12</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-block favourite-category">
+            <div class="stat-title">Favourite Category</div>
+            <div class="stat-content">
+                <div class="stat-icon">
+                    <mat-icon>local_pizza</mat-icon> 
+                </div>
+                <div class="stat-value">
+                    <a href="">Meat</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-block favourite-kitchen">
+            <div class="stat-title">Favourite Kitchen</div>
+            <div class="stat-content">
+                <div class="stat-icon">
+                    <mat-icon>restaurante</mat-icon> 
+                </div>
+                <div class="stat-value">
+                    <a href="">Hungarian</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-block user-recipes-container">       
+        <h2>Recipes (12)</h2>
+         <!-- TODO: recipes -->
+    </div>
+</div>

@@ -1,0 +1,176 @@
+.profile-container {
+    display: grid;
+    grid-template-areas: 
+        "personal stats"
+        "personal recipes";
+    grid-template-columns: 300px auto;
+    grid-template-rows: 100px auto;
+    grid-gap: 1rem;
+    padding: 2rem;
+
+    .profile-block {
+        background-color: var(--background-color);
+        box-shadow: var(--main-shadow);
+        border-radius: 1rem;
+        padding: 1rem;
+        display: flex;
+    }
+
+    .user-info-container {
+        grid-area: personal;
+        height: 81vh;
+        flex-direction: column;
+        position: relative;
+
+        .profile-action-container {
+            display: flex;
+            justify-content: space-between;
+
+            .action-block svg {
+                height: 25px;
+                width: 25px;
+
+                g {
+                    fill: var(--main-color);
+                }
+            }
+        }
+
+        .profile-image-container {
+            text-align: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-text-container {
+            text-align: center;
+
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .user-location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-follow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1rem 0;
+
+            .stat-container {
+                display: flex;
+                justify-content: space-between;
+                color: var(--secondary-text-color);
+                background: var(--main-color);
+                padding: 0.5rem 1rem;
+                margin: 0 -1rem;
+                box-shadow: var(--main-shadow);
+
+                .stat-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .stat-name {
+                        font-size: 14px;
+                    }
+
+                    .stat-number {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .follow-button {
+                text-align: center;
+
+                button {
+                    border: none;
+                    color: var(--secondary-text-color);
+                    background: var(--main-color);
+                    border-radius: 1rem;
+                    padding: 0rem 1.5rem;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .profile-about-container {
+            text-align: justify;
+        }
+        
+        .profile-social-container {
+            width: calc(100% - 2rem);
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+
+            .social-block {
+                svg {
+                    height: 25px;
+                    width: 25px;
+
+                    g {
+                        fill: var(--main-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .user-cook-stats-container {
+        grid-area: stats;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .stat-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 18px;
+
+            .stat-content {
+                display: flex;
+                gap: 0.5rem;
+
+                .stat-icon {
+                    color: var(--main-color);
+                    display: flex;
+                }
+
+                .stat-value a {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .user-recipes-container {
+        grid-area: recipes;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color); 
+}
