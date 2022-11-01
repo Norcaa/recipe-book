@@ -9,13 +9,15 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
 const routes: Routes = [
     {
         path: '',
-        data: { title: 'Food App' },
         /*  component: HomeComponent, */
         children: [
             {
                 path: 'recipe',
-                //loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
                 children: [
+                    {
+                        path: 'new',
+                        component: NewRecipeComponent,
+                    },
                     {
                         path: ':recipename',
                         component: RecipeFullComponent,
@@ -30,6 +32,10 @@ const routes: Routes = [
                         component: RecipeListComponent
                     },
                     {
+                        path: 'categories',
+                        component: CategoriesComponent
+                    },
+                    {
                         path: '',
                         component: RecipesComponent
                     }
@@ -38,7 +44,11 @@ const routes: Routes = [
             {
                 path: 'shopping',
                 component: ShoppingComponent,
-            }
+            },
+            {
+                path: '',
+                component: HomeComponent,
+            },
         ]
     }
 ];
