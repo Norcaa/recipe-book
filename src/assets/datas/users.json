@@ -1,0 +1,31 @@
+{
+    "users": [{
+        "id": 1,
+        "email": "sample@sample.com",
+        "password": "sample@sample.com",
+        "username": "dantelucca",
+        "role": "",
+        "verified": true,
+        "status": "verified",
+        "createDate": "",
+        "deleteDate": "",
+        "updateDate": "",
+        "firstName": "Dante",
+        "lastName": "Lucca",
+        "introduction": "With recent studies showing that, on average, dog owners live up to 24% longer than those without canine companion. These include a more active lifestyle." ,
+        "image": "https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png",
+        "birthDate": "",
+        "birthCity": "",
+        "gender": "women" ,
+        "location": "Debrecen, Hungary",
+        "facebook": "/",
+        "instagram": "/",
+        "twitter": "/",
+        "youtube": "/",
+        "tiktok": "/",
+        "linkedin": "/",
+        "recipes": [],
+        "rating": 1,
+        "experience": ""
+    }]
+}
