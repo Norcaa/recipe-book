@@ -1,0 +1,74 @@
+<div class="new-recipe-container">
+    <h1>Add a new recipe</h1>
+
+    <!-- TODO: interaction, validations -->
+
+    <button (click)="check()">Check</button>
+
+    <div class="new-recipe-block-container" fxLayout="column" fxLayoutGap="1rem">
+        <div class="recipe-image-container new-recipe-block">
+            <div class="image-header block-header">
+                <h2>Choose an image</h2>
+            </div>
+            <div class="image-content block-content">
+                <!-- TODO: upload image -->
+                <mat-icon>file_upload</mat-icon>
+                <div class="image-upload-text">Select an image to upload</div>
+                <!-- <div class="image-upload-text">Drag or drop it here</div> -->
+            </div>
+        </div>
+    
+        <div class="recipe-info-container new-recipe-block" fxLayout="column">
+            <h2>Enter the text</h2>
+
+            <!-- TODO: component -->
+            <mat-form-field appearance="outline" class="add-info-container recipe-name">
+                <mat-label>Name</mat-label>
+                <input matInput>
+                <mat-hint>Max. 80 character</mat-hint>
+            </mat-form-field>
+
+            <!-- TODO: component -->
+            <mat-form-field appearance="outline" class="add-info-container recipe-description">
+                <mat-label>Description</mat-label>
+                <textarea matInput cols="30" rows="3"></textarea>
+                <mat-hint>Max. 300 character</mat-hint>
+            </mat-form-field>         
+        </div>
+
+        <div class="recipe-category-container new-recipe-block">
+            <h2>Select a category</h2>
+            <app-category-picker (category)="this.category = $event"></app-category-picker>
+        </div>
+    
+        <!-- TODO: ingredients -->
+        <div class="recipe-ingredients-container new-recipe-block">
+            <div class="ingredients-header block-header">
+                <h2>List the ingredients</h2>
+                <button mat-icon-button>
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+            <div class="ingredients-content block-content">
+
+            </div>
+        </div>
+    
+        <!-- TODO: change the system -->
+        <div class="recipe-preparation-container new-recipe-block">
+            <div class="preparation-header block-header">
+                <h2>Describe the preparation</h2>
+                <button mat-icon-button (click)="steps.push('')">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+
+            <div class="preparation-content block-content" *ngFor="let step of steps; let i = index">
+                <div class="step-index"> {{i+1}}. </div>
+                <mat-form-field appearance="outline" class="step-text">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>

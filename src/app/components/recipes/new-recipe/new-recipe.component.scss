@@ -1,0 +1,81 @@
+.new-recipe-container {
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    .new-recipe-block {
+        width: 100%;
+        background-color: var(--background-color);
+        box-shadow: var(--main-shadow);
+        border-radius: 1rem;
+        padding: 1rem;
+
+        h2 {    
+           line-height: 20px;
+        }
+
+        .block-header {
+            display: flex;
+            gap: .5rem;
+
+            button {
+                height: 20px;
+                width: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .block-content {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            margin: 0 0 0.5rem 0.5rem;
+
+            mat-form-field {
+                width: 100%;
+            }
+        }
+
+        .image-content {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+            border-radius: 1rem;
+            border: 1px dashed var(--main-color);
+        }
+
+        .preparation-content {
+            .step-index {
+                font-weight: 700;
+                color: var(--main-color);
+                padding-left: 0.5rem;
+            }
+        }
+    }
+}
+
+::ng-deep .preparation-content .step-text {
+    .mat-form-field-wrapper {
+        padding: 0;
+
+        .mat-form-field-infix {
+            padding: 0.5rem 0;
+            border: none;
+
+            input.mat-input-element {
+                margin-top: 0.3em;
+            }
+
+            .mat-form-field-label-wrapper {
+                display: none;
+            }
+        }
+    }
+}
