@@ -1,5 +1,5 @@
 .recipe-full-container {
-    background-color: lightgray;
+    background-color: antiquewhite;
 
     .recipe-cover-image img {
         border-radius: 1rem;
@@ -7,22 +7,43 @@
         width: 800px;
         height: 400px;
         object-fit: cover;
+        box-shadow: var(--main-shadow);
     }
 
     .recipe-content {
         width: 750px;
-        background-color: white;
-        /* box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%); */
-        border-radius: 2rem;
         margin: -3rem auto 3rem auto;
-        padding: 1rem;
 
         .recipe-header {
             margin-bottom: 1rem;
 
             h1 {
-                color: #fc7974;
                 font-weight: 100;
+            }
+        }
+
+        .recipe-header,
+        .recipe-text-row {
+            width: 100%;
+            background-color: var(--background-color);
+            box-shadow: var(--main-shadow);
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+
+        .recipe-text-row h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-category-container {
+            .category-icon {
+                color: var(--main-color);
+                display: flex;
+            }
+
+            .category-name a {
+                text-decoration: none;
+                color: var(--main-text-color); 
             }
         }
 
@@ -34,7 +55,7 @@
                 }
 
                 mat-icon {
-                    color: #fc7974; 
+                    color: var(--main-color);
                 }
             }
         }
@@ -42,9 +63,19 @@
         .recipe-preparation-container {
             .preparation-step-container .step-index {
                 font-weight: 700;
-                color: #fc7974;
+                color: var(--main-color);
                 padding-left: 0.5rem;
             }
+        }
+
+        .recipe-share-button-container {
+            .recipe-share-title h2 {
+                margin: 0;
+            }
+        }
+
+        .recipe-text-container:last-child {
+            margin: 0;
         }
     }
 }
