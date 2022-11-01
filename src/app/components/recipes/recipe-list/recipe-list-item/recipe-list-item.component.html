@@ -1,0 +1,49 @@
+<!-- WITH ANGULAR MATERIAL: -->
+<mat-card class="recipe-item-container list-item" (click)="selectRecipe(recipe)" *ngIf="recipe" 
+    fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="space-between">
+    <img mat-card-md-image [src]="recipe.imagePath" [alt]="recipe.name">
+    <div class="item-text-container">
+        <mat-card-title class="recipe-name-container" [matTooltip]="recipe.name">
+            {{ recipe.name }}
+        </mat-card-title>
+        <mat-card-subtitle class="recipe-description-container">
+            {{ recipe.description }}
+        </mat-card-subtitle>
+    </div>
+    <div class="item-content-container" fxLayout="column" fxLayoutAlign="space-around">
+        <div class="content-block preparation-time-block">
+            <div class="content-icon">
+                <mat-icon>timer</mat-icon>
+            </div> 
+            <div class="content-info">10 min</div>
+        </div>
+        <div class="content-block category-block">
+            <div class="content-icon">
+                <mat-icon>restaurant</mat-icon>
+            </div> 
+            <div class="content-info">Meat</div>
+        </div>
+        <div class="content-block difficulty-block">
+            <div class="content-icon">
+                <mat-icon>help_center</mat-icon>
+            </div> 
+            <div class="content-info">Easy</div>
+        </div>
+    </div>        
+</mat-card>
+
+<!-- WITHOUT ANGULAR MATERIAL: -->
+<!-- <div class="recipe-item-container" (click)="selectRecipe(recipe)" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1rem">
+    <div class="recipe-text-container">
+        <div class="recipe-name-container">
+            <h3> {{ recipe.name }} </h3>
+        </div>
+        <div class="recipe-description-container">
+            <div> {{ recipe.description }} </div>
+        </div>
+    </div>
+    
+    <div class="recipe-image-container">
+        <img [src]="recipe.imagePath" [alt]="recipe.name">
+    </div>
+</div> -->

@@ -1,0 +1,32 @@
+.recipe-item-container.list-item {
+    width: 100%;
+
+    img {
+        min-width: 112px;
+    }
+
+    .item-text-container {
+        width: 100%;
+
+        mat-card-title {
+            margin: 0 0 1rem 0;
+            line-height: 1;
+        }
+    }
+
+    .content-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .content-icon {
+            display: flex;
+            color: var(--main-color);
+        }
+
+        .content-info {
+            width: 51px;
+        }
+    }
+}
