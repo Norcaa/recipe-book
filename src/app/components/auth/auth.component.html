@@ -1,0 +1,29 @@
+<div class="auth-container">
+    <div class="auth-content-container" (click)="showForm = true" [ngClass]="showForm ? 'show-form' : ''">
+        <h1>  {{ loginAction ? 'Login' : 'Registration'}}</h1>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="input-field email-field">
+                <input required type="text" formControlName="email">
+                <span></span>
+                <label for="">Email</label>
+            </div>
+            
+            <div class="input-field password-field">
+                <input required [type]="this.showPassword ? 'text' : 'password'" formControlName="password">
+                <span></span>
+                <label for="">Password</label>
+                <mat-icon (click)="togglePassword()">visibility</mat-icon>
+            </div>
+
+            <div class="auth-routing" [ngClass]="loginAction ? 'login-auth' : 'register-auth'">
+                <a *ngIf="loginAction" href="auth/forgot-password">Forgot Password?</a>
+                <a *ngIf="loginAction" href="auth/registration">Don't have an account?</a>
+                <a *ngIf="!loginAction" href="auth/login">Already have an account?</a>
+            </div>
+
+            <app-submit-button class="submit-button"></app-submit-button>
+        </form>
+    </div>
+</div>
+
+<!-- TODO: remember me, general user conditions -->
