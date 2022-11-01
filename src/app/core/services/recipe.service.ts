@@ -9,6 +9,7 @@ import { Recipe } from '../models/recipe';
 export class RecipeService {
 
     private apiUrl = "http://localhost:3000/recipes"
+    //private apiUrl = "http://localhost:8080/recipes"
 
     constructor(private http: HttpClient) { }
 
@@ -17,12 +18,12 @@ export class RecipeService {
         return this.http.get<Recipe[]>(this.apiUrl);
     }
 
-    postRecipe(recipe: Recipe): Observable<Recipe> {
+    addRecipe(recipe: Recipe): Observable<Recipe> {
         return this.http.post<Recipe>(this.apiUrl, recipe);
     }
 
     updateRecipe(recipe: Recipe): Observable<Recipe> {
-        const url = `${this.apiUrl}/${recipe.id}`; //http://localhost:3000/tasks/*frissítendőid*
+        const url = `${this.apiUrl}/${recipe.id}`;
         return this.http.put<Recipe>(url, recipe);
     }
 
@@ -30,7 +31,4 @@ export class RecipeService {
         const url = `${this.apiUrl}/${recipe.id}`
         return this.http.delete<Recipe>(url);
     }
-
-
-
 }

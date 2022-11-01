@@ -1,9 +1,7 @@
 .recipes-container {
     padding: 1rem;
 
-    .recipes-row {
-        h2 {
-            color: #fc7974;
-        }
+    .recipes-row h2 {
+        color: var(--main-color);
     }
 }
