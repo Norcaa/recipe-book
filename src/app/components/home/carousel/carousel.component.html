@@ -1,0 +1,31 @@
+<div class="carousel-container" fxLayout="row" fxLayoutAlign="center center">
+    <div class="carousel-arrow-container">
+        <div class="arrow-container">
+            <button mat-mini-fab (click)="setRecipe(-1)">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="carousel-previous-content">
+        <app-carousel-card [recipe]="this.previousRecipe"></app-carousel-card>
+    </div>
+
+    <div class="carousel-content-container">
+        <app-carousel-card [recipe]="this.selectedRecipe"></app-carousel-card>
+    </div>
+
+    <div class="carousel-next-content">
+        <app-carousel-card [recipe]="this.nextRecipe"></app-carousel-card>
+    </div>
+
+    <div class="carousel-arrow-container">
+        <div class="arrow-container">
+            <button mat-mini-fab (click)="setRecipe()">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- TODO: animation -->

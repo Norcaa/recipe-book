@@ -1,0 +1,30 @@
+.carousel-container {
+    gap: 2rem;
+    
+    .carousel-arrow-container {
+        .arrow-container {
+            button {
+                z-index: 10;
+                background-color: var(--main-color);
+                color: var(--secondary-text-color);
+            }
+        }
+    }
+
+    .carousel-previous-content, .carousel-next-content {
+        position: absolute;
+        opacity: 40%;
+    }
+
+    .carousel-previous-content {
+        left: -313px;
+    }
+
+    .carousel-next-content {
+        right: -313px;
+    }
+
+    .carousel-content-container {
+        z-index: 10;
+    }
+}
