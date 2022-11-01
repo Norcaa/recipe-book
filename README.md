@@ -1,27 +1,46 @@
-# CodingWorldTutorial
+# Recipe Book
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+A project in which I deal with **recipes**. It contains various interactive elements, HTTP requests, models and routing.
 
-## Development server
+It is important that the project is **in progress** and that there will be further extensions and modifications. For example, it will be expanded with linter, animations, more serious authentication, shopping list, SEO, other pages and more.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies
 
-## Code scaffolding
+Project is created with:
+* Angular 14.2.0
+* SCSS
+* Angular Material
+* Angular Flex Layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+### Clone the repo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+First, you need to clone the repository. In your terminal/shell execute the following command:
 
-## Running unit tests
+```
+git clone https://github.com/Norcaa/recipe-book
+cd recipe-book
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Install npm packages
 
-## Running end-to-end tests
+Install the `npm` packages, what you need:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install
+```
 
-## Further help
+or
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm start
+```
+
+### Run the application
+
+Run the application, go to your browser and navigate to `http://localhost:4200/`. The application interactive and it will automatically reload if you change any of the source files.
+
+```
+ng serve
+```
